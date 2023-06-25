@@ -1,4 +1,4 @@
-#Como rodar o projeto:
+# Como rodar o projeto:
 ## - npm install
 ## - renomear .env.example para .env
 ## - node ace migration:run
