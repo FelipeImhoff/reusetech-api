@@ -11,6 +11,7 @@ export default class extends BaseSchema {
       table.string('senha').notNullable()
       table.string('cpf', 11).notNullable()
       table.string('celular', 11).notNullable()
+      table.boolean('is_admin').defaultTo(false)
       table.timestamp('created_at', { useTz: true })
       table.timestamp('updated_at', { useTz: true })
     })
