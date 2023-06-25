@@ -4,5 +4,4 @@ coverage
 .vscode
 .DS_STORE
 .env
-tmp
-public/uploads/*
+tmp/*
