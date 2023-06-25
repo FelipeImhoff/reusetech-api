@@ -16,6 +16,7 @@ Route.resource('users', 'UsersController')
   })
 
 //Products routes
+Route.get('products/search', 'ProductsController.search').middleware('auth')
 Route.resource('products', 'ProductsController')
   .apiOnly()
   .middleware({

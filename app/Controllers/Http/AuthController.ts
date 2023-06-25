@@ -6,8 +6,7 @@ export default class AuthController {
 
     try {
       return await auth.use('api').attempt(email, password)
-    } catch (e) {
-      console.error(e)
+    } catch {
       return response.unauthorized('Invalid credentials')
     }
   }

@@ -32,8 +32,6 @@ export default class ProductsController {
   public async show({ request }: HttpContextContract) {
     const { id } = request.params()
     const product = await Product.findOrFail(id)
-    const teste = await Product.query().whereLike('descricao', '%cri%')
-    console.log(teste)
     await product.load('category')
     await product.load('user')
     await product.user.load('address')
@@ -60,5 +58,11 @@ export default class ProductsController {
       code: 200,
       message: 'Produto deletado com sucesso!',
     }
+  }
+
+  public async search({ request }: HttpContextContract) {
+    const { queryParameter } = request.all()
+    const products = await Product.query().whereLike('descricao', `%${queryParameter}%`)
+    return products
   }
 }
