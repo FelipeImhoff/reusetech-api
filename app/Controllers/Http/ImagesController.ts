@@ -15,7 +15,6 @@ export default class ImagesController {
   public async store({ request, response }: HttpContextContract) {
     const imageFile = request.file('imagem')
     const { productId } = request.all()
-    console.log(productId)
 
     if (!imageFile) {
       return response.badRequest('Nenhum arquivo enviado')
