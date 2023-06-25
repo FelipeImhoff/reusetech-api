@@ -12,11 +12,11 @@ export default class UsersController {
   }
 
   public async store({ request }: HttpContextContract) {
-    const { nome, email, senha, cpf, celular, addressId } = request.all()
+    const { nome, email, password, cpf, celular, addressId } = request.all()
     const user = await User.create({
       nome,
       email,
-      senha,
+      password,
       cpf,
       celular,
       addressId,
