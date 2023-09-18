@@ -1,4 +1,7 @@
 import Route from '@ioc:Adonis/Core/Route'
+Route.get('/', () => {
+  return "Working!"
+})
 
 //login routes
 Route.post('/login', 'AuthController.login')

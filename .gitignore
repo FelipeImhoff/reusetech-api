@@ -6,3 +6,4 @@ coverage
 .env
 public/uploads/*
 tmp/*
+.vercel
